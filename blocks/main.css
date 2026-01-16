@@ -47,10 +47,16 @@
 }
 
 .card-footer {
-  grid-column: 2 / 4;
+  grid-column: span 2;
 }
 
 @media screen and (max-width: 1024px) {
+  .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 0 30px;
+  }
   .card__title {
     font-size: 24px;
     font-weight: bold;
@@ -67,9 +73,20 @@
     text-align: justify;
     line-height: 1.5;
   }
+
+  .card__image {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 844px) {
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin: 0 30px;
+  }
+
   .card__title {
     font-size: 20px;
     font-weight: bold;
@@ -80,6 +97,14 @@
 
 @media screen and (max-width: 710px) {
   .content {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
   }
 }

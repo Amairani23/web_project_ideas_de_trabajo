@@ -101,6 +101,14 @@
   }
 }
 
+@media screen and (max-width: 620px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .content {
     display: flex;
